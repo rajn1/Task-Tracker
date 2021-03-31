@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\RajNa\\source\\repos\\TaskTracker_V1\\TaskTracker_V1.iOS\\TaskTracker_V1.iOS.csproj": {}
+    "C:\\Users\\RajNa\\Documents\\GitHub\\Task-Tracker\\TaskTracker_V1.iOS\\TaskTracker_V1.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\RajNa\\source\\repos\\TaskTracker_V1\\TaskTracker_V1.iOS\\TaskTracker_V1.iOS.csproj": {
+    "C:\\Users\\RajNa\\Documents\\GitHub\\Task-Tracker\\TaskTracker_V1.iOS\\TaskTracker_V1.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\RajNa\\source\\repos\\TaskTracker_V1\\TaskTracker_V1.iOS\\TaskTracker_V1.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\RajNa\\Documents\\GitHub\\Task-Tracker\\TaskTracker_V1.iOS\\TaskTracker_V1.iOS.csproj",
         "projectName": "TaskTracker_V1.iOS",
-        "projectPath": "C:\\Users\\RajNa\\source\\repos\\TaskTracker_V1\\TaskTracker_V1.iOS\\TaskTracker_V1.iOS.csproj",
+        "projectPath": "C:\\Users\\RajNa\\Documents\\GitHub\\Task-Tracker\\TaskTracker_V1.iOS\\TaskTracker_V1.iOS.csproj",
         "packagesPath": "C:\\Users\\RajNa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\RajNa\\source\\repos\\TaskTracker_V1\\TaskTracker_V1.iOS\\obj\\",
+        "outputPath": "C:\\Users\\RajNa\\Documents\\GitHub\\Task-Tracker\\TaskTracker_V1.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Users\\RajNa\\source\\repos\\TaskTracker_V1\\TaskTracker_V1\\TaskTracker_V1.csproj": {
-                "projectPath": "C:\\Users\\RajNa\\source\\repos\\TaskTracker_V1\\TaskTracker_V1\\TaskTracker_V1.csproj"
+              "C:\\Users\\RajNa\\Documents\\GitHub\\Task-Tracker\\TaskTracker_V1\\TaskTracker_V1.csproj": {
+                "projectPath": "C:\\Users\\RajNa\\Documents\\GitHub\\Task-Tracker\\TaskTracker_V1\\TaskTracker_V1.csproj"
               }
             }
           }
@@ -65,14 +65,14 @@
         }
       }
     },
-    "C:\\Users\\RajNa\\source\\repos\\TaskTracker_V1\\TaskTracker_V1\\TaskTracker_V1.csproj": {
+    "C:\\Users\\RajNa\\Documents\\GitHub\\Task-Tracker\\TaskTracker_V1\\TaskTracker_V1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\RajNa\\source\\repos\\TaskTracker_V1\\TaskTracker_V1\\TaskTracker_V1.csproj",
+        "projectUniqueName": "C:\\Users\\RajNa\\Documents\\GitHub\\Task-Tracker\\TaskTracker_V1\\TaskTracker_V1.csproj",
         "projectName": "TaskTracker_V1",
-        "projectPath": "C:\\Users\\RajNa\\source\\repos\\TaskTracker_V1\\TaskTracker_V1\\TaskTracker_V1.csproj",
+        "projectPath": "C:\\Users\\RajNa\\Documents\\GitHub\\Task-Tracker\\TaskTracker_V1\\TaskTracker_V1.csproj",
         "packagesPath": "C:\\Users\\RajNa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\RajNa\\source\\repos\\TaskTracker_V1\\TaskTracker_V1\\obj\\",
+        "outputPath": "C:\\Users\\RajNa\\Documents\\GitHub\\Task-Tracker\\TaskTracker_V1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

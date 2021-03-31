@@ -1939,11 +1939,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\RajNa\\source\\repos\\TaskTracker_V1\\TaskTracker_V1.Android\\TaskTracker_V1.Android.csproj",
+      "projectUniqueName": "C:\\Users\\RajNa\\Documents\\GitHub\\Task-Tracker\\TaskTracker_V1.Android\\TaskTracker_V1.Android.csproj",
       "projectName": "TaskTracker_V1.Android",
-      "projectPath": "C:\\Users\\RajNa\\source\\repos\\TaskTracker_V1\\TaskTracker_V1.Android\\TaskTracker_V1.Android.csproj",
+      "projectPath": "C:\\Users\\RajNa\\Documents\\GitHub\\Task-Tracker\\TaskTracker_V1.Android\\TaskTracker_V1.Android.csproj",
       "packagesPath": "C:\\Users\\RajNa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\RajNa\\source\\repos\\TaskTracker_V1\\TaskTracker_V1.Android\\obj\\",
+      "outputPath": "C:\\Users\\RajNa\\Documents\\GitHub\\Task-Tracker\\TaskTracker_V1.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1964,8 +1964,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\RajNa\\source\\repos\\TaskTracker_V1\\TaskTracker_V1\\TaskTracker_V1.csproj": {
-              "projectPath": "C:\\Users\\RajNa\\source\\repos\\TaskTracker_V1\\TaskTracker_V1\\TaskTracker_V1.csproj"
+            "C:\\Users\\RajNa\\Documents\\GitHub\\Task-Tracker\\TaskTracker_V1\\TaskTracker_V1.csproj": {
+              "projectPath": "C:\\Users\\RajNa\\Documents\\GitHub\\Task-Tracker\\TaskTracker_V1\\TaskTracker_V1.csproj"
             }
           }
         }

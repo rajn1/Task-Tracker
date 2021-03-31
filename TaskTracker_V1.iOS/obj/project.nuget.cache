@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NlmsTNw+/YdmOuwEfCMLx4PbsySneaGvXpS+eq3MUlCbAFkOGehQ67zmgx70aSJQ8MkZu1W55anwiSYrSIVnPg==",
+  "dgSpecHash": "5mkjeLoZIY9Mxifq3BHHjcuhE0Tdz/hPlU06M/VuLdfomeoxyIWIiBJZkYoPi/D+RMJCapkKCbV2VjyWoeDs8g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\RajNa\\source\\repos\\TaskTracker_V1\\TaskTracker_V1.iOS\\TaskTracker_V1.iOS.csproj",
+  "projectFilePath": "C:\\Users\\RajNa\\Documents\\GitHub\\Task-Tracker\\TaskTracker_V1.iOS\\TaskTracker_V1.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512"

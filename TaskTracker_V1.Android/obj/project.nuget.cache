@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "V4dZ/9o7wS+CnGWzM/rZLeI6tXVSAjL3o68oUP7h3pLZ1fSk8KXzjijTUbMO28fZ4GMpto3eA6MfaMgGSXk2Qw==",
+  "dgSpecHash": "o1yrA81r27YZoQw5DKMf+gfoSlDK9VGJSBNN2vQKy/EdEGaZhO4fCPxXB6ZbNIOaTysx5Fk5CHnxW2Fr3pE3Pw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\RajNa\\source\\repos\\TaskTracker_V1\\TaskTracker_V1.Android\\TaskTracker_V1.Android.csproj",
+  "projectFilePath": "C:\\Users\\RajNa\\Documents\\GitHub\\Task-Tracker\\TaskTracker_V1.Android\\TaskTracker_V1.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.runtime\\1.1.1.3\\xamarin.android.arch.core.runtime.1.1.1.3.nupkg.sha512",
