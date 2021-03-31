@@ -6,6 +6,7 @@
              Title="New Item"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.UseSafeArea="true">
+    <!-- RN TODO: Add in connection to table to select values for Client-->
     <ContentPage.Content>
         <StackLayout Spacing="3" Padding="15">
             <Label Text="Client" FontSize="Medium" />

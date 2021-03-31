@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:TaskTracker_V1.ViewModels"  
              xmlns:model="clr-namespace:TaskTracker_V1.Models"  
              x:Name="BrowseItemsPage">
-
+    <!-- App New Task Button-->
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="New Task" IconImageSource="icon_plus.png" Command="{Binding AddItemCommand}" />
     </ContentPage.ToolbarItems>
