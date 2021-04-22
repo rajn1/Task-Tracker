@@ -17,7 +17,7 @@ namespace TaskTracker_V1.Views
 {
 
     // Classes meant to represent the data structure for SQL tables
-    public class timeEntries : INotifyPropertyChanged
+    public class TimeEntry : INotifyPropertyChanged
     {
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
@@ -30,6 +30,32 @@ namespace TaskTracker_V1.Views
         public event PropertyChangedEventHandler PropertyChanged; // Notify Subscribers when something has changed with this table
     }
 
+    public class TimeTask : INotifyPropertyChanged
+    {
+        [PrimaryKey, AutoIncrement]
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public Boolean Is_Billable { get; set; }
+        public int Client_ID { get; set; }
+        public DateTime Add_Date { get; set; }
+        public DateTime Update_Date { get; set; }
+        public Boolean Is_Deleted { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged; // Notify Subscribers when something has changed with this table
+    }
+
+    public class Client : INotifyPropertyChanged
+    {
+        [PrimaryKey, AutoIncrement]
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public DateTime Add_Date { get; set; }
+        public DateTime Update_Date { get; set; }
+        public Boolean Is_Deleted { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged; // Notify Subscribers when something has changed with this table
+    }
+
 
     public partial class ItemsPage : ContentPage
     {
@@ -37,7 +63,7 @@ namespace TaskTracker_V1.Views
 
         private SQLiteAsyncConnection _connection;
 
-        private ObservableCollection<timeEntries> _timeEntries;
+        private ObservableCollection<TimeEntry> _timeEntries;
 
         public ItemsPage()
         {
@@ -52,41 +78,41 @@ namespace TaskTracker_V1.Views
         protected override async void OnAppearing()
         {
 
-            await _connection.CreateTableAsync<timeEntries>();
-            var timeEntries = await _connection.Table<timeEntries>().ToListAsync();
+            await _connection.CreateTableAsync<TimeEntry>();
+            var timeEntries = await _connection.Table<TimeEntry>().ToListAsync();
             timeEntriesListView.ItemsSource = _timeEntries; 
 
             base.OnAppearing();
             _viewModel.OnAppearing();
         }
 
-        async void OnAdd(object sender, System.EventArgs e)
-        {
-            var timeEntry = new timeEntries { Total_Time = 0 };
+        //async void OnAdd(object sender, System.EventArgs e)
+        //{
+        //    var timeEntry = new TimeEntry { Total_Time = 0 };
 
-            await _connection.InsertAsync(timeEntry);
+        //    await _connection.InsertAsync(timeEntry);
 
 
-            _timeEntries.Add(timeEntry);
-        }
+        //    _timeEntries.Add(timeEntry);
+        //}
 
-        async void OnDelete(object sender, System.EventArgs e)
-        {
+        //async void OnDelete(object sender, System.EventArgs e)
+        //{
 
-            var timeEntry = _timeEntries[0];
+        //    var timeEntry = _timeEntries[0];
 
-            await _connection.DeleteAsync(timeEntry);
+        //    await _connection.DeleteAsync(timeEntry);
 
-            _timeEntries.Remove(timeEntry);
-        }
+        //    _timeEntries.Remove(timeEntry);
+        //}
 
-        async void OnUpdate(object sender, System.EventArgs e)
-        {
-            var timeEntry = _timeEntries[0];
-            timeEntry.Total_Time += 1; // Temporarily use a button to increate time by 1, see what happens
+        //async void OnUpdate(object sender, System.EventArgs e)
+        //{
+        //    var timeEntry = _timeEntries[0];
+        //    timeEntry.Total_Time += 1; // Temporarily use a button to increate time by 1, see what happens
 
-            await _connection.UpdateAsync(timeEntry);
-        }
+        //    await _connection.UpdateAsync(timeEntry);
+        //}
 
     }
 }

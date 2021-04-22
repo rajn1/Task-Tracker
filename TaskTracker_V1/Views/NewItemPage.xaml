@@ -10,9 +10,9 @@
     <ContentPage.Content>
         <StackLayout Spacing="3" Padding="15">
             <Label Text="Client" FontSize="Medium" />
-            <Entry Text="{Binding Text, Mode=TwoWay}" FontSize="Medium" />
+            <Entry x:Name="clientName" Text="{Binding Text, Mode=TwoWay}" FontSize="Medium" Placeholder="Client X" />
             <Label Text="Task Name" FontSize="Medium" />
-            <Editor Text="{Binding Description, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
+            <Editor x:Name="taskName" Text="{Binding Description, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
             <StackLayout Orientation="Horizontal">
                 <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
                 <Button Text="Save" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"></Button>
