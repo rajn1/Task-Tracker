@@ -1,4 +1,5 @@
 ﻿using System;
+using SQLite;
 
 namespace TaskTracker_V1.Models
 {
@@ -8,4 +9,5 @@ namespace TaskTracker_V1.Models
         public string Text { get; set; }
         public string Description { get; set; }
     }
+
 }

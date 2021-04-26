@@ -17,7 +17,7 @@
     <StackLayout>
         <StackLayout Orientation="Horizontal">
         </StackLayout>
-        <ListView x:Name="timeEntriesListView">
+        <ListView x:Name="taskListView">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell Text="{Binding Name}" />

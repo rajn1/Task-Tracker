@@ -10,20 +10,20 @@ namespace TaskTracker_V1.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {
-        private Item _selectedItem;
+        private TimeEntry _selectedItem;
 
-        public ObservableCollection<Item> Items { get; }
+        public ObservableCollection<TimeEntry> Items { get; }
         public Command LoadItemsCommand { get; }
         public Command AddItemCommand { get; }
-        public Command<Item> ItemTapped { get; }
+        public Command<TimeEntry> ItemTapped { get; }
 
         public ItemsViewModel()
         {
             Title = "Browse";
-            Items = new ObservableCollection<Item>();
+            Items = new ObservableCollection<TimeEntry>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
-            ItemTapped = new Command<Item>(OnItemSelected);
+            ItemTapped = new Command<TimeEntry>(OnItemSelected);
 
             AddItemCommand = new Command(OnAddItem);
         }
@@ -57,7 +57,7 @@ namespace TaskTracker_V1.ViewModels
             SelectedItem = null;
         }
 
-        public Item SelectedItem
+        public TimeEntry SelectedItem
         {
             get => _selectedItem;
             set
@@ -72,7 +72,7 @@ namespace TaskTracker_V1.ViewModels
             await Shell.Current.GoToAsync(nameof(NewItemPage));
         }
 
-        async void OnItemSelected(Item item)
+        async void OnItemSelected(TimeEntry item)
         {
             if (item == null)
                 return;

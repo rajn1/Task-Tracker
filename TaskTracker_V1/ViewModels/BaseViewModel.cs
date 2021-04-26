@@ -40,15 +40,24 @@ namespace TaskTracker_V1.ViewModels
         }
 
         #region INotifyPropertyChanged
+        // Code below represents items for SQLite implementation to hanlde behavior when a property is changed
+        // https://medium.com/swlh/xamarin-forms-mvvm-how-to-work-with-sqlite-db-c-xaml-26fcae303edd
         public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            var changed = PropertyChanged;
-            if (changed == null)
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        protected void SetValue<T>(ref T backingField, T value, [CallerMemberName] string propertyName = null)
+        {
+            if (EqualityComparer<T>.Default.Equals(backingField, value))
                 return;
 
-            changed.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            backingField = value;
+
+            OnPropertyChanged(propertyName);
         }
+
         #endregion
     }
 }

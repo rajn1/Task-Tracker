@@ -6,7 +6,6 @@ using TaskTracker_V1.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using SQLite;
-using System.Collections.ObjectModel;
 
 namespace TaskTracker_V1.Views
 {
@@ -14,14 +13,10 @@ namespace TaskTracker_V1.Views
     public partial class NewItemPage : ContentPage
     {
 
-        ItemsViewModel _viewModel;
 
         private SQLiteAsyncConnection _connection;
 
-        private ObservableCollection<TimeTask> _tasks;
-
-
-
+        
 
         public Item Item { get; set; }
 
@@ -32,7 +27,7 @@ namespace TaskTracker_V1.Views
         }
 
 
-        async void SaveCommand(object sender, System.EventArgs e)
+        public async void SaveCommand(object sender, System.EventArgs e)
         {
 
 
@@ -40,14 +35,7 @@ namespace TaskTracker_V1.Views
 
             await _connection.InsertAsync(newTimeTask);
 
-
-            _tasks.Add(newTimeTask);
-        }
-
-
-
-
-
+           }
 
 
     }

@@ -63,8 +63,6 @@ namespace TaskTracker_V1.Views
 
         private SQLiteAsyncConnection _connection;
 
-        private ObservableCollection<TimeEntry> _timeEntries;
-
         public ItemsPage()
         {
             InitializeComponent();
@@ -80,7 +78,7 @@ namespace TaskTracker_V1.Views
 
             await _connection.CreateTableAsync<TimeEntry>();
             var timeEntries = await _connection.Table<TimeEntry>().ToListAsync();
-            timeEntriesListView.ItemsSource = _timeEntries; 
+            taskListView.ItemsSource = _taskList; 
 
             base.OnAppearing();
             _viewModel.OnAppearing();
