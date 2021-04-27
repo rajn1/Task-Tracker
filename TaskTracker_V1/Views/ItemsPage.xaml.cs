@@ -13,48 +13,13 @@ using TaskTracker_V1.Persistence;
 using SQLite;
 using System.Collections.ObjectModel;
 
+/*
+ * This is no longer needed code
+ * Commenting it out to debug the remaining application
+ * TODO: Once debugged, delete this cs file
+ * 
 namespace TaskTracker_V1.Views
 {
-
-    // Classes meant to represent the data structure for SQL tables
-    public class TimeEntry : INotifyPropertyChanged
-    {
-        [PrimaryKey, AutoIncrement]
-        public int ID { get; set; }
-        public int Total_Time { get; set; }
-        public string Notes { get; set; }
-        public DateTime Add_Date { get; set; }
-        public Boolean Is_Deleted { get; set; }
-        public int Task_ID { get; set; }
-
-        public event PropertyChangedEventHandler PropertyChanged; // Notify Subscribers when something has changed with this table
-    }
-
-    public class TimeTask : INotifyPropertyChanged
-    {
-        [PrimaryKey, AutoIncrement]
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public Boolean Is_Billable { get; set; }
-        public int Client_ID { get; set; }
-        public DateTime Add_Date { get; set; }
-        public DateTime Update_Date { get; set; }
-        public Boolean Is_Deleted { get; set; }
-
-        public event PropertyChangedEventHandler PropertyChanged; // Notify Subscribers when something has changed with this table
-    }
-
-    public class Client : INotifyPropertyChanged
-    {
-        [PrimaryKey, AutoIncrement]
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public DateTime Add_Date { get; set; }
-        public DateTime Update_Date { get; set; }
-        public Boolean Is_Deleted { get; set; }
-
-        public event PropertyChangedEventHandler PropertyChanged; // Notify Subscribers when something has changed with this table
-    }
 
 
     public partial class ItemsPage : ContentPage
@@ -114,3 +79,4 @@ namespace TaskTracker_V1.Views
 
     }
 }
+*/

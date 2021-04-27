@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "FCp0Lwy8Wgs62dQeIlSkBwYz9WgOha9kV+wnXcxum6Y8/14mm2ORmj+VNg8z7O+ELkubGoy2OVjUddK2hmDboA==",
+  "dgSpecHash": "Hqbpy2l7GxY8pHxV7HOln+NdQRrVqLYF7P/zmNyc10FTWFCNiie2v0T4oNfduf5eA5u25YtIQCJ8wLq7j0TOYg==",
   "success": true,
   "projectFilePath": "C:\\Users\\RajNa\\Documents\\GitHub\\Task-Tracker\\TaskTracker_V1.Android\\TaskTracker_V1.Android.csproj",
   "expectedPackageFiles": [
@@ -52,5 +52,26 @@
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Essentials from 1.6.1 to 1.5.3.2. Reference the package directly from the project to select a different version. \r\n TaskTracker_V1.Android -> TaskTracker_V1 -> Xamarin.Essentials (>= 1.6.1) \r\n TaskTracker_V1.Android -> Xamarin.Essentials (>= 1.5.3.2)",
+      "libraryId": "Xamarin.Essentials",
+      "targetGraphs": [
+        "MonoAndroid,Version=v9.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Forms from 5.0.0.2012 to 4.8.0.1451. Reference the package directly from the project to select a different version. \r\n TaskTracker_V1.Android -> TaskTracker_V1 -> Xamarin.Forms (>= 5.0.0.2012) \r\n TaskTracker_V1.Android -> Xamarin.Forms (>= 4.8.0.1451)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "MonoAndroid,Version=v9.0"
+      ]
+    }
+  ]
 }

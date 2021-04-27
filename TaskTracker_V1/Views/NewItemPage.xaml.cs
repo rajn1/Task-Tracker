@@ -7,6 +7,13 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using SQLite;
 
+/*
+ * 
+ * This is no longer needed code
+ * Commenting it out to debug the remaining application
+ * TODO: Once debugged, delete this cs file
+ * 
+
 namespace TaskTracker_V1.Views
 {
 
@@ -41,3 +48,6 @@ namespace TaskTracker_V1.Views
     }
 
 }
+
+
+*/

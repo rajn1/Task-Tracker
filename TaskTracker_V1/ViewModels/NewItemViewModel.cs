@@ -5,6 +5,13 @@ using System.Windows.Input;
 using TaskTracker_V1.Models;
 using Xamarin.Forms;
 
+/*
+ * This is no longer needed code
+ * Commenting it out to debug the remaining application
+ * TODO: Once debugged, delete this cs file
+ * 
+
+
 namespace TaskTracker_V1.ViewModels
 {
     public class NewItemViewModel : BaseViewModel
@@ -63,3 +70,6 @@ namespace TaskTracker_V1.ViewModels
         }
     }
 }
+
+
+*/

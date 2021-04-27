@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OWuxXDLDXIWNPiXX4Oc/bYdvGBHtkg91pJKDgOFanGlcB8Mw+vT/Y3+N8N5+VZu8aP0zbj2juqn6uLUijywmRw==",
+  "dgSpecHash": "wwenSwLjQ4Ilms70bEjRRXm2oozUg0FgHCBqouMK2hsYAFti3zjwdxS46BcHmnCwpcP4a5OsR99JXsez1VW9TA==",
   "success": true,
   "projectFilePath": "C:\\Users\\RajNa\\Documents\\GitHub\\Task-Tracker\\TaskTracker_V1\\TaskTracker_V1.csproj",
   "expectedPackageFiles": [
@@ -15,8 +15,8 @@
     "C:\\Users\\RajNa\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\RajNa\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\RajNa\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512"
+    "C:\\Users\\RajNa\\.nuget\\packages\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
+    "C:\\Users\\RajNa\\.nuget\\packages\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
   ],
   "logs": []
 }

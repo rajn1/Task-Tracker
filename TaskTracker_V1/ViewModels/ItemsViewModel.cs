@@ -6,24 +6,31 @@ using TaskTracker_V1.Models;
 using TaskTracker_V1.Views;
 using Xamarin.Forms;
 
+/*
+ * 
+ * This is no longer needed code
+ * Commenting it out to debug the remaining application
+ * TODO: Once debugged, delete this cs file
+ * 
+
 namespace TaskTracker_V1.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {
-        private TimeEntry _selectedItem;
+        private Item _selectedItem;
 
-        public ObservableCollection<TimeEntry> Items { get; }
+        public ObservableCollection<Item> Items { get; }
         public Command LoadItemsCommand { get; }
         public Command AddItemCommand { get; }
-        public Command<TimeEntry> ItemTapped { get; }
+        public Command<Item> ItemTapped { get; }
 
         public ItemsViewModel()
         {
             Title = "Browse";
-            Items = new ObservableCollection<TimeEntry>();
+            Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
-            ItemTapped = new Command<TimeEntry>(OnItemSelected);
+            ItemTapped = new Command<Item>(OnItemSelected);
 
             AddItemCommand = new Command(OnAddItem);
         }
@@ -57,7 +64,7 @@ namespace TaskTracker_V1.ViewModels
             SelectedItem = null;
         }
 
-        public TimeEntry SelectedItem
+        public Item SelectedItem
         {
             get => _selectedItem;
             set
@@ -72,7 +79,7 @@ namespace TaskTracker_V1.ViewModels
             await Shell.Current.GoToAsync(nameof(NewItemPage));
         }
 
-        async void OnItemSelected(TimeEntry item)
+        async void OnItemSelected(Item item)
         {
             if (item == null)
                 return;
@@ -82,3 +89,6 @@ namespace TaskTracker_V1.ViewModels
         }
     }
 }
+
+
+*/

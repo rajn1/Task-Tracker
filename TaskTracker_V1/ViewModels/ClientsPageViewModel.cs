@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -20,7 +21,7 @@ namespace TaskTracker_V1.ViewModels
 
         private bool _isDataLoaded;
 
-        public ObservableCollection<ClientViewModel> Clients { get; private set; }
+        public ObservableCollection<ClientViewModel> _ClientList { get; private set; }
             = new ObservableCollection<ClientViewModel>();
 
         public ClientViewModel SelectedClient
@@ -32,7 +33,7 @@ namespace TaskTracker_V1.ViewModels
         public ICommand LoadDataCommand { get; private set; }
         public ICommand AddClientCommand { get; private set; }
         public ICommand SelectClientCommand { get; private set; }
-        public ICommand DeleteClientCommand { get; private set;
+        public ICommand DeleteClientCommand { get; private set; }
 
         public ClientsPageViewModel(IClientStore ClientStore, IPageService pageService)
         {
@@ -54,12 +55,12 @@ namespace TaskTracker_V1.ViewModels
 
         private void OnClientAdded(ClientsDetailViewModel source, Client client)
         {
-            Clients.Add(new ClientViewModel(client));
+            _ClientList.Add(new ClientViewModel(client));
         }
 
         private void OnClientUpdated(ClientsDetailViewModel source, Client Client)
         {
-            var ClientInList = Clients.Single(c => c.Id == Client.Id);
+            var ClientInList = _ClientList.Single(c => c.ID == Client.ID);
 
             ClientInList.ID = Client.ID;
             ClientInList.Name = Client.Name;
@@ -75,7 +76,7 @@ namespace TaskTracker_V1.ViewModels
             _isDataLoaded = true;
             var Clients = await _ClientStore.GetClientsAsync();
             foreach (var Client in Clients)
-                Clients.Add(new ClientViewModel(Client));
+                _ClientList.Add(new ClientViewModel(Client));
         }
 
         // Add button will trigger this call to a new page where Client details can be entered
@@ -99,9 +100,9 @@ namespace TaskTracker_V1.ViewModels
         {
             if (await _pageService.DisplayAlert("Warning", $"Are you sure you want to delete {ClientViewModel.Name}?", "Yes", "No"))
             {
-                Clients.Remove(ClientViewModel);
+                _ClientList.Remove(ClientViewModel);
 
-                var Client = await _ClientStore.GetClient(ClientViewModel.Id);
+                var Client = await _ClientStore.GetClient(ClientViewModel.ID);
                 await _ClientStore.DeleteClient(Client);
             }
         }
