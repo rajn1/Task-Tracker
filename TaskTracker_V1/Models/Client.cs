@@ -13,6 +13,7 @@ namespace TaskTracker_V1.Models
         public DateTime AddDate { get; set; }
         public DateTime UpdateDate { get; set; }
         public Boolean IsDeleted { get; set; }
+        public Boolean IsFavorite { get; set; }
 
     }
 }

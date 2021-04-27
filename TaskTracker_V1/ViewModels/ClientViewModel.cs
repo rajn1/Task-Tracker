@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Text;
 using TaskTracker_V1.Models;
 
+
+// https://medium.com/swlh/xamarin-forms-mvvm-how-to-work-with-sqlite-db-c-xaml-26fcae303edd
 namespace TaskTracker_V1.ViewModels
 {
-    public class TimeEntryViewModel: BaseViewModel
+    public class ClientViewModel: BaseViewModel
     {
-        /* Details from TimeEntry Model Class
+        /* Details from Client Model Class
          *         
         public int ID { get; set; }
         public int Total_Time { get; set; }
@@ -20,36 +22,26 @@ namespace TaskTracker_V1.ViewModels
 
         public int ID { get; set; }
 
-        public TimeEntryViewModel() { }
+        public ClientViewModel() { }
 
-        public TimeEntryViewModel(TimeEntry timeEntry) {
+        public ClientViewModel(Client Client) {
 
-            ID = timeEntry.ID;
-            _TotalTime = timeEntry.TotalTime;
-            _Notes = timeEntry.Notes;
-            _AddDate = timeEntry.AddDate;
-            _IsDeleted = timeEntry.IsDeleted;
-            _TaskID = timeEntry.TaskID;
-        
+            ID = Client.ID;
+            _Name = Client.Name;
+            _AddDate = Client.AddDate;
+            _IsDeleted = Client.IsDeleted; 
+            _UpdateDate = Client.UpdateDate;
+            _IsFavorite = Client.IsFavorite;
+
         }
 
-        private int _TotalTime;
-        public int TotalTime
+        private string _Name;
+        public string Name
         {
-            get { return _TotalTime; }
+            get { return _Name; }
             set
             {
-                SetValue(ref _TotalTime, value);
-            }
-        }
-
-        private string _Notes;
-        public string Notes
-        {
-            get { return _Notes; }
-            set
-            {
-                SetValue(ref _Notes, value);
+                SetValue(ref _Name, value);
             }
         }
 
@@ -73,16 +65,27 @@ namespace TaskTracker_V1.ViewModels
             }
         }
 
-        private int _TaskID;
-        public int TaskID
+        private DateTime _UpdateDate;
+        public DateTime UpdateDate
         {
-            get { return _TaskID; }
+            get { return _UpdateDate; }
             set
             {
-                SetValue(ref _TaskID, value);
+                SetValue(ref _UpdateDate, value);
             }
         }
 
+        private Boolean _IsFavorite;
+        public Boolean IsFavorite
+        {
+            get { return _IsFavorite; }
+            set
+            {
+                SetValue(ref _IsFavorite, value);
+            }
+        }
 
     }
+
+
 }
