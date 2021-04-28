@@ -16,10 +16,10 @@
         <ListView.ItemTemplate>
             <DataTemplate>
                 <TextCell Text="{Binding Name}" Detail="{Binding ID}" DetailColor="Black" TextColor="Red">
-                    <ImageCell.ContextActions>
+                    <TextCell.ContextActions>
                         <MenuItem Text="Edit" IsDestructive="true" Command="{Binding Source={x:Reference ClientsPage}, Path=ViewModel.EditClientCommand}" CommandParameter="{Binding .}" />
                         <MenuItem Text="Delete" IsDestructive="true" Command="{Binding Source={x:Reference ClientsPage}, Path=ViewModel.DeleteClientCommand}" CommandParameter="{Binding .}" />
-                    </ImageCell.ContextActions>
+                    </TextCell.ContextActions>
                 </TextCell>
             </DataTemplate>
         </ListView.ItemTemplate>

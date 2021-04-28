@@ -15,7 +15,6 @@ namespace TaskTracker_V1
 
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
 
