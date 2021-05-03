@@ -8,9 +8,9 @@ using Xamarin.Forms;
 
 namespace TaskTracker_V1.ViewModels
 {
+    // INotifyPropertyChanged is used to notify the "control" that a property value has changed to the View Model
     public class BaseViewModel : INotifyPropertyChanged
     {
- //       public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
 
         bool isBusy = false;
         public bool IsBusy
@@ -40,8 +40,9 @@ namespace TaskTracker_V1.ViewModels
         }
 
         #region INotifyPropertyChanged
-        // Code below represents items for SQLite implementation to hanlde behavior when a property is changed
+        // Code below represents items for SQLite implementation to handle behavior when a property is changed
         // https://medium.com/swlh/xamarin-forms-mvvm-how-to-work-with-sqlite-db-c-xaml-26fcae303edd
+        // Implemented for the generic type and extended for all data types
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {

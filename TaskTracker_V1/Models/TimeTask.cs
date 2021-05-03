@@ -10,6 +10,7 @@ namespace TaskTracker_V1.Models
     {
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
+        [MaxLength(255)]
         public string Name { get; set; }
         public Boolean IsBillable { get; set; }
         public int ClientID { get; set; }

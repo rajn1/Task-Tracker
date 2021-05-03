@@ -2,24 +2,16 @@
 using System.Collections.Generic;
 using System.Text;
 using TaskTracker_V1.Models;
+using Xamarin.Forms;
 
 
 // https://medium.com/swlh/xamarin-forms-mvvm-how-to-work-with-sqlite-db-c-xaml-26fcae303edd
 namespace TaskTracker_V1.ViewModels
 {
+    // Provides all needed details to access a client
+    // By extending the BaseViewModel, we can implement INotifyPropertyChanged for all clients, allowing the VewModel (VM) to be notified of changes
     public class ClientViewModel: BaseViewModel
     {
-        /* Details from Client Model Class
-         *         
-        public int ID { get; set; }
-        public int Total_Time { get; set; }
-        public string Notes { get; set; }
-        public DateTime Add_Date { get; set; }
-        public Boolean Is_Deleted { get; set; }
-        public int Task_ID { get; set; }
-         * 
-         */
-
         public int ID { get; set; }
 
         public ClientViewModel() { }
@@ -82,6 +74,19 @@ namespace TaskTracker_V1.ViewModels
             set
             {
                 SetValue(ref _IsFavorite, value);
+            }
+        }
+
+        // Display a star for the clients marked as Favorites
+        public ImageSource ProfileImage
+        {
+            get
+            {
+                if (IsFavorite)
+                {
+                    return ImageSource.FromResource("TaskTracker_V1.Assets.Images.star.png");
+                }
+                return ImageSource.FromResource("TaskTracker_V1.Assets.Images.business.png");
             }
         }
 

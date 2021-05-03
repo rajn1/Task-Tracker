@@ -39,11 +39,13 @@ namespace TaskTracker_V1.ViewModels
                 await _pageService.DisplayAlert("Error", "Please enter the name.", "OK");
                 return;
             }
+            // If this is a new client, add it to the DB by sending to messaging center
             if (Client.ID == 0)
             {
                 await _ClientStore.AddClient(Client);
                 MessagingCenter.Send(this, Events.ClientAdded, Client);
             }
+            // If this is an existing client, send an update message to the messaging center
             else
             {
                 await _ClientStore.UpdateClient(Client);

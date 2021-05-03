@@ -9,10 +9,12 @@ using TaskTracker_V1.Models;
 using TaskTracker_V1.Services;
 using TaskTracker_V1.Views;
 using Xamarin.Forms;
-using Client = TaskTracker_V1.Models.Client;
 
 namespace TaskTracker_V1.ViewModels
 {
+    // In MVVM, the ViewModel will contain commands, which are methods that can respond to specific activity in the view (i.e. button push)
+    // For a data binding between button and viewModel, the button will define a command and command paramter
+    // The data binding that targets the command property of the button has a source is a property in the viewModel of type ICommand
     public class ClientsPageViewModel : BaseViewModel
     {
         private ClientViewModel _selectedClient;
@@ -21,7 +23,7 @@ namespace TaskTracker_V1.ViewModels
 
         private bool _isDataLoaded;
 
-        public ObservableCollection<ClientViewModel> _ClientList { get; private set; }
+        public ObservableCollection<ClientViewModel> Clients { get; private set; }
             = new ObservableCollection<ClientViewModel>();
 
         public ClientViewModel SelectedClient
@@ -55,12 +57,12 @@ namespace TaskTracker_V1.ViewModels
 
         private void OnClientAdded(ClientsDetailViewModel source, Client client)
         {
-            _ClientList.Add(new ClientViewModel(client));
+            Clients.Add(new ClientViewModel(client));
         }
 
         private void OnClientUpdated(ClientsDetailViewModel source, Client Client)
         {
-            var ClientInList = _ClientList.Single(c => c.ID == Client.ID);
+            var ClientInList = Clients.Single(c => c.ID == Client.ID);
 
             ClientInList.ID = Client.ID;
             ClientInList.Name = Client.Name;
@@ -76,7 +78,7 @@ namespace TaskTracker_V1.ViewModels
             _isDataLoaded = true;
             var Clients = await _ClientStore.GetClientsAsync();
             foreach (var Client in Clients)
-                _ClientList.Add(new ClientViewModel(Client));
+                this.Clients.Add(new ClientViewModel(Client));
         }
 
         // Add button will trigger this call to a new page where Client details can be entered
@@ -100,16 +102,12 @@ namespace TaskTracker_V1.ViewModels
         {
             if (await _pageService.DisplayAlert("Warning", $"Are you sure you want to delete {ClientViewModel.Name}?", "Yes", "No"))
             {
-                _ClientList.Remove(ClientViewModel);
+                Clients.Remove(ClientViewModel);
 
                 var Client = await _ClientStore.GetClient(ClientViewModel.ID);
                 await _ClientStore.DeleteClient(Client);
             }
         }
 
-        private async Task EditClient(ClientViewModel ClientViewModel)
-        {
-                // TBD
-        }
     }
 }

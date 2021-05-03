@@ -8,7 +8,8 @@ using Xamarin.Forms;
 namespace TaskTracker_V1.Services
 {
 
-
+    // Interface to control navigation logic
+    // Can implement logic to control navigation and ensure certain business rules are enforced
     public interface IPageService
     {
         Task PushAsync(Page page);
@@ -17,6 +18,7 @@ namespace TaskTracker_V1.Services
         Task DisplayAlert(string title, string message, string ok);
     }
 
+    // CLass that extends the above to provide methods for navigation
     class PageService: IPageService
     {
 
