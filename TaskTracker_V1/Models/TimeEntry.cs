@@ -14,6 +14,7 @@ namespace TaskTracker_V1.Models
         public int TotalTime { get; set; }
         public string Notes { get; set; }
         public DateTime AddDate { get; set; }
+        public DateTime UpdateDate { get; set; }
         public Boolean IsDeleted { get; set; }
         public int TaskID { get; set; }
 
