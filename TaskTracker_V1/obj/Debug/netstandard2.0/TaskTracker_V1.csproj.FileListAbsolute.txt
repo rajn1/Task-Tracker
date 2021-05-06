@@ -36,3 +36,5 @@ C:\Users\RajNa\Documents\GitHub\Task-Tracker\TaskTracker_V1\obj\Debug\netstandar
 C:\Users\RajNa\Documents\GitHub\Task-Tracker\TaskTracker_V1\obj\Debug\netstandard2.0\TaskTracker_V1.pdb
 C:\Users\RajNa\Documents\GitHub\Task-Tracker\TaskTracker_V1\obj\Debug\netstandard2.0\Views\ClientDetailPage.xaml.g.cs
 C:\Users\RajNa\Documents\GitHub\Task-Tracker\TaskTracker_V1\obj\Debug\netstandard2.0\Views\ClientsPage.xaml.g.cs
+C:\Users\RajNa\Documents\GitHub\Task-Tracker\TaskTracker_V1\obj\Debug\netstandard2.0\Views\TimeTaskDetailPage.xaml.g.cs
+C:\Users\RajNa\Documents\GitHub\Task-Tracker\TaskTracker_V1\obj\Debug\netstandard2.0\Views\TimeTasksPage.xaml.g.cs

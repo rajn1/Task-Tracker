@@ -17,7 +17,6 @@
             <DataTemplate>
                 <ImageCell ImageSource="{Binding ProfileImage}" Text="{Binding Name}" DetailColor="Black" TextColor="Red">
                     <ImageCell.ContextActions>
-  <!--                      <MenuItem Text="Edit" IsDestructive="true" Command="{Binding Source={x:Reference clientsPage}, Path=ViewModel.EditClientCommand}" CommandParameter="{Binding .}" /> -->
                         <MenuItem Text="Delete" IsDestructive="true" Command="{Binding Source={x:Reference clientsPage}, Path=ViewModel.DeleteClientCommand}" CommandParameter="{Binding .}" />
                     </ImageCell.ContextActions>
                 </ImageCell>

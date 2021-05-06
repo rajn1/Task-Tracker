@@ -9,6 +9,8 @@ namespace TaskTracker_V1.ViewModels
     {
         public static string ClientAdded = "AddClient";
         public static string ClientUpdated = "UpdateClient";
+        public static string TimeTaskAdded = "AddTimeTask";
+        public static string TimeTaskUpdated = "UpdateTimeTask";
     }
 
 }

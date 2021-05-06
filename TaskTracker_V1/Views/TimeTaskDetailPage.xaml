@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="TaskTracker_V1.Views.TimeTaskDetailPage"
+             xmlns:vm="clr-namespace:TaskTracker_V1.ViewModels">
+    <TableView Intent="Form" Margin="16,0">
+        <TableRoot>
+            <TableSection Title="Details">
+                <EntryCell Label="Name" Text="{Binding Path=TimeTask.Name}" />
+                <EntryCell Label="Client" Keyboard="Numeric" Text="{Binding Path=TimeTask.ClientID}" />
+            </TableSection>
+            <TableSection Title="Other">
+                <!-- SwitchCell allows for switching between two bits -->
+                <SwitchCell Text="Is this task Billable?" On="{Binding Path=TimeTask.IsBillable}" />
+            </TableSection>
+            <TableSection>
+                <ViewCell>
+                    <!-- Save Client-->
+                    <Button Text="Save" Command="{Binding SaveCommand}" />
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
