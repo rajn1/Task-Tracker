@@ -18,6 +18,9 @@
     <Compile Update="Views\ClientDetailPage.xaml.cs">
       <DependentUpon>ClientDetailPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\ClientSelectionPage.xaml.cs">
+      <DependentUpon>ClientSelectionPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\TimeTasksPage.xaml.cs">
       <DependentUpon>TimeTasksPage.xaml</DependentUpon>
     </Compile>
@@ -28,6 +31,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ClientDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ClientSelectionPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\TimeTasksPage.xaml">

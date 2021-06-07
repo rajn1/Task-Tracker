@@ -108,6 +108,5 @@ namespace TaskTracker_V1.ViewModels
                 await _ClientStore.DeleteClient(Client);
             }
         }
-
     }
 }

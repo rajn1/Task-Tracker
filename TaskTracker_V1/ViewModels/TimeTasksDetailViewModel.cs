@@ -13,16 +13,18 @@ namespace TaskTracker_V1.ViewModels
     public class TimeTasksDetailViewModel
     {
         private readonly ITimeTaskStore _TimeTaskStore;
+        private readonly IClientStore _ClientStore;
         private readonly IPageService _pageService;
         public TimeTask TimeTask { get; private set; }
         public ICommand SaveCommand { get; private set; }
-        public TimeTasksDetailViewModel(TimeTaskViewModel viewModel, ITimeTaskStore TimeTaskStore, IPageService pageService)
+        public TimeTasksDetailViewModel(TimeTaskViewModel viewModel, ITimeTaskStore TimeTaskStore, IClientStore ClientStore, IPageService pageService)
         {
             if (viewModel == null)
                 throw new ArgumentNullException(nameof(viewModel));
 
             _pageService = pageService;
             _TimeTaskStore = TimeTaskStore;
+            _ClientStore = ClientStore;
             SaveCommand = new Command(async () => await Save());
             TimeTask = new TimeTask
             {

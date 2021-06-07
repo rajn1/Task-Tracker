@@ -7,7 +7,16 @@
         <TableRoot>
             <TableSection Title="Details">
                 <EntryCell Label="Name" Text="{Binding Path=TimeTask.Name}" />
-                <EntryCell Label="Client" Keyboard="Numeric" Text="{Binding Path=TimeTask.ClientID}" />
+                <ViewCell Tapped="Handle_Tapped">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Client" VerticalOptions="Center" />
+                        <Label x:Name="clientName"
+                               VerticalOptions="Center"
+                               HorizontalOptions="EndAndExpand"
+                               Text="None"
+                               TextColor="Gray" />
+                    </StackLayout>
+                </ViewCell>
             </TableSection>
             <TableSection Title="Other">
                 <!-- SwitchCell allows for switching between two bits -->
@@ -15,7 +24,7 @@
             </TableSection>
             <TableSection>
                 <ViewCell>
-                    <!-- Save Client-->
+                    <!-- Save Time Task-->
                     <Button Text="Save" Command="{Binding SaveCommand}" />
                 </ViewCell>
             </TableSection>
