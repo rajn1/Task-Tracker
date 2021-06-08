@@ -33,7 +33,7 @@ namespace TaskTracker_V1.Views
         // TODO : Convert this to an actual accessible list of names / figure out what to do about the Foreign Key ID needed
         public ListView ClientList
         {
-            get { return listView; }
+            get { return clientListView; }
         }
     }
 }

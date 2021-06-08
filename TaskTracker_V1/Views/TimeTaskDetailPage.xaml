@@ -13,8 +13,8 @@
                         <Label x:Name="clientName"
                                VerticalOptions="Center"
                                HorizontalOptions="EndAndExpand"
-                               Text="None"
-                               TextColor="Gray" />
+                               Text="{Binding Path=TimeTask.ClientID}"
+                               TextColor="Gray"/>
                     </StackLayout>
                 </ViewCell>
             </TableSection>
