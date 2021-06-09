@@ -17,6 +17,7 @@
             <DataTemplate>
                 <TextCell Text="{Binding Name}" DetailColor="Black" TextColor="Red">
                     <TextCell.ContextActions>
+                        <MenuItem Text="Start Timer" IsDestructive="false" Command="{Binding Source={x:Reference timeTasksPage}, Path=ViewModel.StartTimeTaskTimerCommand}" CommandParameter="{Binding .}"/>
                         <MenuItem Text="Delete" IsDestructive="true" Command="{Binding Source={x:Reference timeTasksPage}, Path=ViewModel.DeleteTimeTaskCommand}" CommandParameter="{Binding .}" />
                     </TextCell.ContextActions>
                 </TextCell>

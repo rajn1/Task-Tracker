@@ -36,6 +36,7 @@ namespace TaskTracker_V1.ViewModels
         public ICommand AddTimeTaskCommand { get; private set; }
         public ICommand SelectTimeTaskCommand { get; private set; }
         public ICommand DeleteTimeTaskCommand { get; private set; }
+        public ICommand StartTimeTaskTimerCommand { get; private set; }
 
         public TimeTaskPageViewModel(ITimeTaskStore TimeTaskStore, IPageService pageService)
         {
@@ -46,6 +47,7 @@ namespace TaskTracker_V1.ViewModels
             AddTimeTaskCommand = new Command(async () => await AddTimeTask());
             SelectTimeTaskCommand = new Command<TimeTaskViewModel>(async c => await SelectTimeTask(c));
             DeleteTimeTaskCommand = new Command<TimeTaskViewModel>(async c => await DeleteTimeTask(c));
+            StartTimeTaskTimerCommand = new Command<TimeTaskViewModel>(async c => await StartTimeTaskTimer(c));
 
             MessagingCenter.Subscribe<TimeTasksDetailViewModel, TimeTask>
                 (this, Events.TimeTaskAdded, OnTimeTaskAdded);
@@ -107,6 +109,18 @@ namespace TaskTracker_V1.ViewModels
                 var TimeTask = await _TimeTaskStore.GetTimeTask(TimeTaskViewModel.ID);
                 await _TimeTaskStore.DeleteTimeTask(TimeTask);
             }
+        }
+
+        // Menu item will allow the selected TimeTask to be deleted from the TimeTasks list
+        private async Task StartTimeTaskTimer(TimeTaskViewModel TimeTask)
+        {
+
+            if (TimeTask == null)
+                return;
+
+            SelectedTimeTask = null;
+            await _pageService.PushAsync(new TimeEntryDetailPage(TimeTask));
+
         }
 
     }
