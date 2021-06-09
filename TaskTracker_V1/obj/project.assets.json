@@ -176,6 +176,18 @@
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
+      "Xam.Plugins.Forms.ProgressRing/0.1.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.3.4.247"
+        },
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/ProgressRing.Forms.Plugin.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/ProgressRing.Forms.Plugin.dll": {}
+        }
+      },
       "Xamarin.Essentials/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -557,6 +569,22 @@
         "version.txt"
       ]
     },
+    "Xam.Plugins.Forms.ProgressRing/0.1.2": {
+      "sha512": "TqxIQo9uiq0EXPSIet8eouoF0Vs1Al30Urd++LXkH2lCQPMJzr5aCrwnCrTi9/4V229njCgUw53+Au6xWbZwHg==",
+      "type": "package",
+      "path": "xam.plugins.forms.progressring/0.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/ProgressRing.Forms.Plugin.Android.dll",
+        "lib/MonoAndroid10/ProgressRing.Forms.Plugin.dll",
+        "lib/Xamarin.iOS10/ProgressRing.Forms.Plugin.dll",
+        "lib/Xamarin.iOS10/ProgressRing.Forms.Plugin.iOS.dll",
+        "lib/portable-net45+wp80+win8+wpa81/ProgressRing.Forms.Plugin.dll",
+        "xam.plugins.forms.progressring.0.1.2.nupkg.sha512",
+        "xam.plugins.forms.progressring.nuspec"
+      ]
+    },
     "Xamarin.Essentials/1.6.1": {
       "sha512": "gG1Bp4j4bpJQ0dp9MeBJQJ9c8xULauIlhc7Cx5Qw4J2K1c+4Glq5n+gkb9Pm0UA/CevXVqLK5ZXmZkuYI52FgA==",
       "type": "package",
@@ -828,6 +856,7 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "NETStandard.Library >= 2.0.3",
+      "Xam.Plugins.Forms.ProgressRing >= 0.1.2",
       "Xamarin.Essentials >= 1.6.1",
       "Xamarin.Forms >= 5.0.0.2012",
       "sqlite-net-pcl >= 1.7.335"
@@ -886,6 +915,10 @@
             "version": "[2.0.3, )",
             "autoReferenced": true
           },
+          "Xam.Plugins.Forms.ProgressRing": {
+            "target": "Package",
+            "version": "[0.1.2, )"
+          },
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.6.1, )"
@@ -912,5 +945,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Xam.Plugins.Forms.ProgressRing 0.1.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Xam.Plugins.Forms.ProgressRing",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    }
+  ]
 }

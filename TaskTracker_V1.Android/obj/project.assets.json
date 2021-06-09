@@ -104,6 +104,20 @@
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
+      "Xam.Plugins.Forms.ProgressRing/0.1.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.3.4.247"
+        },
+        "compile": {
+          "lib/MonoAndroid10/ProgressRing.Forms.Plugin.Android.dll": {},
+          "lib/MonoAndroid10/ProgressRing.Forms.Plugin.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/ProgressRing.Forms.Plugin.Android.dll": {},
+          "lib/MonoAndroid10/ProgressRing.Forms.Plugin.dll": {}
+        }
+      },
       "Xamarin.AndroidX.Activity/1.1.0.5": {
         "type": "package",
         "dependencies": {
@@ -1068,6 +1082,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Xam.Plugins.Forms.ProgressRing": "0.1.2",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
           "sqlite-net-pcl": "1.7.335"
@@ -1267,6 +1282,22 @@
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Xam.Plugins.Forms.ProgressRing/0.1.2": {
+      "sha512": "TqxIQo9uiq0EXPSIet8eouoF0Vs1Al30Urd++LXkH2lCQPMJzr5aCrwnCrTi9/4V229njCgUw53+Au6xWbZwHg==",
+      "type": "package",
+      "path": "xam.plugins.forms.progressring/0.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/ProgressRing.Forms.Plugin.Android.dll",
+        "lib/MonoAndroid10/ProgressRing.Forms.Plugin.dll",
+        "lib/Xamarin.iOS10/ProgressRing.Forms.Plugin.dll",
+        "lib/Xamarin.iOS10/ProgressRing.Forms.Plugin.iOS.dll",
+        "lib/portable-net45+wp80+win8+wpa81/ProgressRing.Forms.Plugin.dll",
+        "xam.plugins.forms.progressring.0.1.2.nupkg.sha512",
+        "xam.plugins.forms.progressring.nuspec"
       ]
     },
     "Xamarin.AndroidX.Activity/1.1.0.5": {

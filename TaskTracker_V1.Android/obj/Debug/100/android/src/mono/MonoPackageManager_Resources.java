@@ -4,6 +4,8 @@ public class MonoPackageManager_Resources {
 		/* We need to ensure that "TaskTracker_V1.Android.dll" comes first in this list. */
 		"TaskTracker_V1.Android.dll",
 		"FormsViewGroup.dll",
+		"ProgressRing.Forms.Plugin.Android.dll",
+		"ProgressRing.Forms.Plugin.dll",
 		"SQLite-net.dll",
 		"SQLitePCLRaw.batteries_v2.dll",
 		"SQLitePCLRaw.core.dll",

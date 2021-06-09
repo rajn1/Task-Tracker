@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KRPDgBzilHKDzE7Qkn9Nk30Ak/OXAe2g3Wdjf4s4GZBFi/u5cqAsjSyeqOSXxllQ6vgu2496lP4nr5qsE28rBg==",
+  "dgSpecHash": "uaTBU2nCXh0e5eihaIDsSF2lPGsrGvgBEt71iPrScrAkMJ70oEaHS09sOmqbp5XdoLRtO6B5jBdA/YvemwRj7Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\RajNa\\Documents\\GitHub\\Task-Tracker\\TaskTracker_V1.Android\\TaskTracker_V1.Android.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "C:\\Users\\RajNa\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\RajNa\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\RajNa\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\RajNa\\.nuget\\packages\\xam.plugins.forms.progressring\\0.1.2\\xam.plugins.forms.progressring.0.1.2.nupkg.sha512",
     "C:\\Users\\RajNa\\.nuget\\packages\\xamarin.androidx.activity\\1.1.0.5\\xamarin.androidx.activity.1.1.0.5.nupkg.sha512",
     "C:\\Users\\RajNa\\.nuget\\packages\\xamarin.androidx.annotation\\1.1.0.8\\xamarin.androidx.annotation.1.1.0.8.nupkg.sha512",
     "C:\\Users\\RajNa\\.nuget\\packages\\xamarin.androidx.annotation.experimental\\1.0.0.8\\xamarin.androidx.annotation.experimental.1.0.0.8.nupkg.sha512",

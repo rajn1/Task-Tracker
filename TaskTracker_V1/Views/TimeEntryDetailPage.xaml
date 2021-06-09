@@ -1,12 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TaskTracker_V1.Views.TimeEntryDetailPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Time Entry Page Coming Soon!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:control="clr-namespace:ProgressRingControl.Forms.Plugin;assembly=ProgressRing.Forms.Plugin"
+             xmlns:local1="clr-namespace:TaskTracker_V1.ViewModels"
+             mc:Ignorable="d" x:Class="TaskTracker_V1.Views.TimeEntryDetailPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local1:ValueProgressBarConverter x:Key="ValueProgressBar" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid VerticalOptions="CenterAndExpand">
+        <control:ProgressRing   HeightRequest="90" RingProgressColor="Orange" Scale="2" WidthRequest="90" RingThickness="5"  Progress="{Binding ProgressValue , Converter={StaticResource ValueProgressBar},Mode=TwoWay}"/>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label FontAttributes="Bold" FontSize="20" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="Black" Text="{Binding ProgressValue, StringFormat='{0}'}"/>
+            <Label Text="Sec" HorizontalTextAlignment="Center"/>
         </StackLayout>
-    </ContentPage.Content>
+    </Grid>
 </ContentPage>
