@@ -38,7 +38,23 @@ namespace TaskTracker_V1.ViewModels
 
         async Task Save()
         {
-                // TODO
+            if (TimeEntry.TotalTime == 0)
+            {
+                await _pageService.DisplayAlert("Error", "Time Entry of 0 seconds not allowed", "OK");
+            }
+            // Add new Time ENtry if it is new
+            if(TimeEntry.ID == 0)
+            {
+            await _TimeEntryStore.AddTimeEntry(TimeEntry);
+            MessagingCenter.Send(this, Events.TimeEntryAdded, TimeEntry);
+            }
+            // If it's an existing TimeEntry, send an update message to the DB
+            else
+            {
+            await _TimeEntryStore.UpdateTimeEntry(TimeEntry);
+            MessagingCenter.Send(this, Events.TimeEntryUpdated, TimeEntry);
+            }
+            await _pageService.PopAsync();
         }
     }
 

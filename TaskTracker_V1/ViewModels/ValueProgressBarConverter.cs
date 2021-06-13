@@ -3,7 +3,6 @@ using Xamarin.Forms;
 
 namespace TaskTracker_V1.ViewModels
 {
-{
     public class ValueProgressBarConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Timers;
+using TaskTracker_V1.ViewModels;
 using Xamarin.Forms;
 
 namespace TaskTracker_V1.Views
@@ -42,7 +43,7 @@ public partial class TimeEntryDetailPage : ContentPage
     {
         get
         {
-            return _ProgressValue;
+            return Maximum;
         }
         set
         {
@@ -52,7 +53,7 @@ public partial class TimeEntryDetailPage : ContentPage
     }
     private Timer time = new Timer();
     private bool timerRunning;
-    public TimeEntryDetailPage()
+    public TimeEntryDetailPage(TimeEntryViewModel TimeEntry)
     {
         InitializeComponent();
         BindingContext = this;

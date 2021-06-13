@@ -10,6 +10,7 @@
       "TaskTracker_V1/1.0.0": {
         "dependencies": {
           "NETStandard.Library": "2.0.3",
+          "Xam.Plugins.Forms.ProgressRing": "0.1.2",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
           "sqlite-net-pcl": "1.7.335"
@@ -105,6 +106,17 @@
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
             "assemblyVersion": "4.0.4.1",
             "fileVersion": "4.6.26919.2"
+          }
+        }
+      },
+      "Xam.Plugins.Forms.ProgressRing/0.1.2": {
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/ProgressRing.Forms.Plugin.dll": {
+            "assemblyVersion": "1.0.6460.16364",
+            "fileVersion": "1.0.6460.16364"
           }
         }
       },
@@ -219,6 +231,13 @@
       "sha512": "sha512-wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
       "path": "system.runtime.compilerservices.unsafe/4.5.2",
       "hashPath": "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+    },
+    "Xam.Plugins.Forms.ProgressRing/0.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TqxIQo9uiq0EXPSIet8eouoF0Vs1Al30Urd++LXkH2lCQPMJzr5aCrwnCrTi9/4V229njCgUw53+Au6xWbZwHg==",
+      "path": "xam.plugins.forms.progressring/0.1.2",
+      "hashPath": "xam.plugins.forms.progressring.0.1.2.nupkg.sha512"
     },
     "Xamarin.Essentials/1.6.1": {
       "type": "package",

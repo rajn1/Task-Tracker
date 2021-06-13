@@ -11,11 +11,31 @@
             <local1:ValueProgressBarConverter x:Key="ValueProgressBar" />
         </ResourceDictionary>
     </ContentPage.Resources>
-    <Grid VerticalOptions="CenterAndExpand">
-        <control:ProgressRing   HeightRequest="90" RingProgressColor="Orange" Scale="2" WidthRequest="90" RingThickness="5"  Progress="{Binding ProgressValue , Converter={StaticResource ValueProgressBar},Mode=TwoWay}"/>
-        <StackLayout VerticalOptions="CenterAndExpand">
-            <Label FontAttributes="Bold" FontSize="20" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="Black" Text="{Binding ProgressValue, StringFormat='{0}'}"/>
-            <Label Text="Sec" HorizontalTextAlignment="Center"/>
-        </StackLayout>
-    </Grid>
+
+    <TableView Intent="Form" Margin="16,0">
+        <TableRoot>
+            <TableSection>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                        <Label Text="[Add Client Name Here]" VerticalOptions="Start" HorizontalOptions="Center"/>
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+            <TableSection>
+                <ViewCell>
+                    <StackLayout>
+                        <control:ProgressRing RingProgressColor="Orange" Scale="2" RingThickness="5"  Progress="{Binding ProgressValue , Converter={StaticResource ValueProgressBar},Mode=TwoWay}"/>
+                        <Label FontAttributes="Bold" FontSize="20" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="Black" Text="{Binding ProgressValue, StringFormat='{0}'}"/>
+                        <Label Text="Sec" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+            <TableSection>
+                <ViewCell>
+                    <Button BackgroundColor="white" TextColor="black" Opacity="0.15" HorizontalOptions="Center" Text="Stop Timer"/>
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+
 </ContentPage>

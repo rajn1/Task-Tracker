@@ -49,9 +49,12 @@ namespace TaskTracker_V1.ViewModels
             DeleteTimeTaskCommand = new Command<TimeTaskViewModel>(async c => await DeleteTimeTask(c));
             StartTimeTaskTimerCommand = new Command<TimeTaskViewModel>(async c => await StartTimeTaskTimer(c));
 
+
+            // Listen for a message sent indicating a TimeTask was added and then act on it
             MessagingCenter.Subscribe<TimeTasksDetailViewModel, TimeTask>
                 (this, Events.TimeTaskAdded, OnTimeTaskAdded);
 
+            // Listen for a message sent indicating a TimeTask was updated and then act on it
             MessagingCenter.Subscribe<TimeTasksDetailViewModel, TimeTask>
                 (this, Events.TimeTaskUpdated, OnTimeTaskUpdated);
         }
