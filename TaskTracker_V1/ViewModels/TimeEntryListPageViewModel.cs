@@ -12,12 +12,10 @@ using Xamarin.Forms;
 
 namespace TaskTracker_V1.ViewModels
 {
-    class TimeEntryListPageViewModel : BaseViewModel
+    public class TimeEntryListPageViewModel : BaseViewModel
     {
 
         // Pending Instantiation to ensure this class acts as a list of time entries tied to a task
-        // TODO:
-        // - Model on TimeTaskPageViewModel
         // Link up to MessageCenter to react when a new TimeEntry is added or Updated
 
         private TimeEntryListPageViewModel _selectedTimeEntry;
