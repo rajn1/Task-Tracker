@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="TaskTracker_V1.Views.ClientDetailPage"
-             xmlns:vm="clr-namespace:TaskTracker_V1.ViewModels">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TaskTracker_V1.ViewModels"
+             x:Class="TaskTracker_V1.Views.ClientDetailPage">
     <TableView Intent="Form" Margin="16,0">
         <TableRoot>
             <TableSection Title="Name">
                 <EntryCell Label="Name" Text="{Binding Path=Client.Name}" />
             </TableSection>
- <!--       <TableSection Title="Contact">
+            <!--       <TableSection Title="Contact">
                 <EntryCell Label="Phone" Text="{Binding Path=Contact.Phone}" Keyboard="Numeric" />
                 <EntryCell Label="Email" Text="{Binding Path=Contact.Email}" Keyboard="Email" />
             </TableSection> -->
@@ -17,7 +17,7 @@
                 <SwitchCell Text="Add to Favorites" On="{Binding Path=Client.IsFavorite}" />
             </TableSection>
             <TableSection>
-                <ViewCell> 
+                <ViewCell>
                     <!-- Save Client-->
                     <Button Text="Save" Command="{Binding SaveCommand}" />
                 </ViewCell>

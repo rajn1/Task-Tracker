@@ -1,18 +1,15 @@
 ﻿using TaskTracker_V1.Persistence;
 using TaskTracker_V1.Services;
 using TaskTracker_V1.ViewModels;
-using Xamarin.Forms;
 
 namespace TaskTracker_V1.Views
 {
-
     public partial class TimeTaskDetailPage : ContentPage
     {
-
         // Temp variable to store selected client's ID
-        int clientID_selected;
+        private int clientID_selected;
 
-        void Handle_Tapped(object sender, System.EventArgs e)
+        private void Handle_Tapped(object sender, System.EventArgs e)
         {
             // Make new page a variable so that we can pull out the selected ID
             var clientSelectionPage = new ClientSelectionPage();
@@ -20,7 +17,7 @@ namespace TaskTracker_V1.Views
             clientSelectionPage.ClientList.ItemSelected += (source, args) =>
             {
                 // Safe because this is guarenteed to always be a client
-                var client = (ClientViewModel) args.SelectedItem;
+                var client = (ClientViewModel)args.SelectedItem;
                 clientName.Text = client.Name;
                 clientID_selected = client.ID;
                 Navigation.PopAsync();

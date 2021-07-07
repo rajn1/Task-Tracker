@@ -1,9 +1,4 @@
-﻿using System;
-using System.Windows.Input;
-using Xamarin.Essentials;
-using Xamarin.Forms;
-
-namespace TaskTracker_V1.ViewModels
+﻿namespace TaskTracker_V1.ViewModels
 {
     public class AboutViewModel : BaseViewModel
     {

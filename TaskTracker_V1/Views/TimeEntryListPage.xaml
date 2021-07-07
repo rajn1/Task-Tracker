@@ -4,10 +4,15 @@
              x:Class="TaskTracker_V1.Views.TimeEntryListPage"
              x:Name="timeEntryListPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+        <ListView ItemsSource="{Binding TimeEntries}" SelectedItem="{Binding SelectedTimeEntry, Mode=TwoWay}" HasUnevenRows="True" SeparatorColor="Gray" ItemSelected="OnTimeEntrySelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding TotalTime}" DetailColor="Black" TextColor="Red">
+                        <TextCell.ContextActions>
+                            <MenuItem Text="Delete" IsDestructive="true" Command="{Binding Source={x:Reference timeEntryListPage}, Path=ViewModel.DeleteTimeEntryCommand}" CommandParameter="{Binding .}" />
+                        </TextCell.ContextActions>
+                    </TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 </ContentPage>

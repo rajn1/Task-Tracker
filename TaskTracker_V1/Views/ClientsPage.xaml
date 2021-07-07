@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage Title="Clients" xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TaskTracker_V1.Views.ClientsPage"
              x:Name="clientsPage">
-    <!-- https://medium.com/swlh/xamarin-forms-mvvm-how-to-work-with-sqlite-db-c-xaml-26fcae303edd 
+    <!-- https://medium.com/swlh/xamarin-forms-mvvm-how-to-work-with-sqlite-db-c-xaml-26fcae303edd
     - The commanding interface provides an approach to impement commands with MVVM
     - Use by defining a data binding that targets the comman property of a button, where the source is a property in the ViewModel of type command
-    
+
     -->
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add" Command="{Binding AddClientCommand}" />
@@ -17,6 +17,7 @@
             <DataTemplate>
                 <ImageCell ImageSource="{Binding ProfileImage}" Text="{Binding Name}" DetailColor="Black" TextColor="Red">
                     <ImageCell.ContextActions>
+                        <MenuItem Text="Open Time Entries" IsDestructive="false" Command="{Binding Source={x:Reference timeEntryListPage}, Path=ViewModel.OpenTimeEntryCommand}" CommandParameter="{Binding .}" />
                         <MenuItem Text="Delete" IsDestructive="true" Command="{Binding Source={x:Reference clientsPage}, Path=ViewModel.DeleteClientCommand}" CommandParameter="{Binding .}" />
                     </ImageCell.ContextActions>
                 </ImageCell>

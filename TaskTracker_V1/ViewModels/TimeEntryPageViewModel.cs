@@ -1,43 +1,35 @@
-﻿using System;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using TaskTracker_V1.Models;
+﻿using TaskTracker_V1.Models;
 using TaskTracker_V1.Services;
-using TaskTracker_V1.Views;
-using Xamarin.Forms;
 
 namespace TaskTracker_V1.ViewModels
 {
-
     public class TimeEntryPageViewModel : BaseViewModel, INotifyPropertyChanged
     {
         private readonly ITimeEntryStore _TimeEntryStore;
         private readonly IPageService _pageService;
         private Stopwatch stopwatch;
         private bool stopwatchRunning;
-        string progressValue;
-        
-        public string ProgressValue { 
-            
+        private string progressValue;
+
+        public string ProgressValue
+        {
             get
             {
                 return progressValue;
             }
-            
+
             set
             {
-                if(progressValue != value)
+                if (progressValue != value)
                 {
                     progressValue = value;
                     PropertyChanged(this, new PropertyChangedEventArgs("ProgressValue"));
                 }
-            }    
-                
+            }
         }
+
         public TimeEntry TimeEntry { get; private set; }
-        
+
         public ICommand SaveCommand { get; private set; }
         public ICommand TimerStartCommand { get; private set; }
         public ICommand TimerStopCommand { get; private set; }
@@ -93,7 +85,6 @@ namespace TaskTracker_V1.ViewModels
             stopwatch.Start();
             stopwatchRunning = true;
 
-
             Device.StartTimer(TimeSpan.FromMilliseconds(100), () =>
             {
                 ProgressValue = stopwatch.Elapsed.ToString("mm\\:ss\\.ff");
@@ -106,10 +97,7 @@ namespace TaskTracker_V1.ViewModels
                     return true;
                 }
             });
-
-
         }
-
 
         private void TimerStop()
         {

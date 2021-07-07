@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace TaskTracker_V1.ViewModels
+﻿namespace TaskTracker_V1.ViewModels
 {
-
     public static class Events
     {
         public static string ClientAdded = "AddClient";
@@ -14,5 +9,4 @@ namespace TaskTracker_V1.ViewModels
         public static string TimeEntryAdded = "AddTimeEntry";
         public static string TimeEntryUpdated = "UpdateTimeEntry";
     }
-
 }

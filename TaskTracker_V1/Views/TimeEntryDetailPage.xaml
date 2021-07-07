@@ -16,7 +16,7 @@
             <TableSection>
                 <ViewCell>
                     <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                        <Label Text="[Add Client Name Here]" VerticalOptions="Start" HorizontalOptions="Center" x:Name="ClientName"/>
+                        <Label Text="[Add Client Name Here]" VerticalOptions="Start" HorizontalOptions="Center" x:Name="ClientName" />
                     </StackLayout>
                 </ViewCell>
             </TableSection>
@@ -28,7 +28,7 @@
                         <Label FontAttributes="Bold" FontSize="20" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="Black" Text="{Binding ProgressValue, StringFormat='{0}'}" />
                         <Label Text="Sec" HorizontalTextAlignment="Center" />
                         -->
-                        <Label x:Name="TimerCount" TextColor="Black" Text="{Binding ProgressValue, Mode=TwoWay}"/>
+                        <Label x:Name="TimerCount" TextColor="Black" Text="{Binding ProgressValue, Mode=TwoWay}" />
                     </StackLayout>
                 </ViewCell>
             </TableSection>

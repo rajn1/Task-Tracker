@@ -1,25 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using TaskTracker_V1.Models;
-using TaskTracker_V1.Services;
-using Xamarin.Forms;
-
-namespace TaskTracker_V1.ViewModels
+﻿namespace TaskTracker_V1.ViewModels
 {
     // INotifyPropertyChanged is used to notify the "control" that a property value has changed to the View Model
     public class BaseViewModel : INotifyPropertyChanged
     {
+        private bool isBusy = false;
 
-        bool isBusy = false;
         public bool IsBusy
         {
             get { return isBusy; }
             set { SetProperty(ref isBusy, value); }
         }
 
-        string title = string.Empty;
+        private string title = string.Empty;
+
         public string Title
         {
             get { return title; }
@@ -40,10 +33,12 @@ namespace TaskTracker_V1.ViewModels
         }
 
         #region INotifyPropertyChanged
+
         // Code below represents items for SQLite implementation to handle behavior when a property is changed
         // https://medium.com/swlh/xamarin-forms-mvvm-how-to-work-with-sqlite-db-c-xaml-26fcae303edd
         // Implemented for the generic type and extended for all data types
         public event PropertyChangedEventHandler PropertyChanged;
+
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
@@ -59,6 +54,6 @@ namespace TaskTracker_V1.ViewModels
             OnPropertyChanged(propertyName);
         }
 
-        #endregion
+        #endregion INotifyPropertyChanged
     }
 }

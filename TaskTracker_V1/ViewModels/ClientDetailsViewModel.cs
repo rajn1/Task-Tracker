@@ -1,21 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using TaskTracker_V1.Models;
+﻿using TaskTracker_V1.Models;
 using TaskTracker_V1.Services;
-using Xamarin.Forms;
 
 namespace TaskTracker_V1.ViewModels
 {
-
     public class ClientsDetailViewModel
     {
         private readonly IClientStore _ClientStore;
         private readonly IPageService _pageService;
         public Client Client { get; private set; }
         public ICommand SaveCommand { get; private set; }
+
         public ClientsDetailViewModel(ClientViewModel viewModel, IClientStore ClientStore, IPageService pageService)
         {
             if (viewModel == null)
@@ -32,7 +26,7 @@ namespace TaskTracker_V1.ViewModels
             };
         }
 
-        async Task Save()
+        private async Task Save()
         {
             if (String.IsNullOrWhiteSpace(Client.Name))
             {
@@ -54,7 +48,4 @@ namespace TaskTracker_V1.ViewModels
             await _pageService.PopAsync();
         }
     }
-
-
-
 }

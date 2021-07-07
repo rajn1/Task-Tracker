@@ -1,9 +1,6 @@
-﻿using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using TaskTracker_V1.ViewModels;
-using TaskTracker_V1.Persistence;
+﻿using TaskTracker_V1.Persistence;
 using TaskTracker_V1.Services;
-
+using TaskTracker_V1.ViewModels;
 
 namespace TaskTracker_V1.Views
 {

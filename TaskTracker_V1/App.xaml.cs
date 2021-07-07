@@ -1,18 +1,9 @@
-﻿using System;
-using TaskTracker_V1.Services;
-using TaskTracker_V1.Views;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using System.Collections.ObjectModel;
-
-namespace TaskTracker_V1
+﻿namespace TaskTracker_V1
 {
     public partial class App : Application
     {
-
         public App()
         {
-
             InitializeComponent();
 
             MainPage = new AppShell();

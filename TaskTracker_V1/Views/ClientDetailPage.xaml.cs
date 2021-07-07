@@ -1,12 +1,9 @@
 ﻿using TaskTracker_V1.Persistence;
 using TaskTracker_V1.Services;
 using TaskTracker_V1.ViewModels;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace TaskTracker_V1.Views
 {
-
     public partial class ClientDetailPage : ContentPage
     {
         public ClientDetailPage(ClientViewModel viewModel)

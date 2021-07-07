@@ -1,9 +1,6 @@
-﻿using System;
-using TaskTracker_V1.Persistence;
+﻿using TaskTracker_V1.Persistence;
 using TaskTracker_V1.Services;
 using TaskTracker_V1.ViewModels;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace TaskTracker_V1.Views
 {
@@ -12,7 +9,6 @@ namespace TaskTracker_V1.Views
     {
         public TimeEntryListPage()
         {
-
             // Instantiate to load all Time Entries tied to a given TimeTask
             var TimeEntryStore = new SQLiteTimeEntryStore(DependencyService.Get<ISQLiteDb>());
             var pageService = new PageService();
@@ -25,16 +21,16 @@ namespace TaskTracker_V1.Views
             ViewModel.LoadDataCommand.Execute(null);
             base.OnAppearing();
         }
-        void OnTimeTaskSelected(object sender, SelectedItemChangedEventArgs e)
+
+        private void OnTimeTaskSelected(object sender, SelectedItemChangedEventArgs e)
         {
             ViewModel.SelectTimeEntryCommand.Execute(e.SelectedItem);
         }
+
         public TimeEntryListPageViewModel ViewModel
         {
             get { return BindingContext as TimeEntryListPageViewModel; }
             set { BindingContext = value; }
         }
-
-
     }
 }

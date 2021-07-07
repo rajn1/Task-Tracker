@@ -1,10 +1,6 @@
-﻿using System;
-using System.ComponentModel;
-using System.Diagnostics;
-using TaskTracker_V1.Persistence;
+﻿using TaskTracker_V1.Persistence;
 using TaskTracker_V1.Services;
 using TaskTracker_V1.ViewModels;
-using Xamarin.Forms;
 
 namespace TaskTracker_V1.Views
 {
@@ -14,17 +10,13 @@ namespace TaskTracker_V1.Views
     [DesignTimeVisible(false)]
     public partial class TimeEntryDetailPage : ContentPage
     {
-
         public TimeEntryDetailPage(TimeEntryViewModel viewModel)
         {
-
             InitializeComponent();
             var TimeEntryStore = new SQLiteTimeEntryStore(DependencyService.Get<ISQLiteDb>());
             var pageService = new PageService();
             Title = (viewModel.ID == 0) ? "New Time Entry" : "Edit Time Entry";
             BindingContext = new TimeEntryPageViewModel(viewModel ?? new TimeEntryViewModel(), TimeEntryStore, pageService);
-
         }
-
     }
 }

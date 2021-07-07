@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using TaskTracker_V1.Models;
-using Xamarin.Forms;
-
+﻿using TaskTracker_V1.Models;
 
 // https://medium.com/swlh/xamarin-forms-mvvm-how-to-work-with-sqlite-db-c-xaml-26fcae303edd
 namespace TaskTracker_V1.ViewModels
@@ -14,11 +9,12 @@ namespace TaskTracker_V1.ViewModels
     {
         public int ID { get; set; }
 
-        public TimeEntryViewModel() { }
+        public TimeEntryViewModel()
+        {
+        }
 
         public TimeEntryViewModel(TimeEntry TimeEntry)
         {
-
             ID = TimeEntry.ID;
             _Notes = TimeEntry.Notes;
             _TotalTime = TimeEntry.TotalTime;
@@ -26,10 +22,10 @@ namespace TaskTracker_V1.ViewModels
             _UpdateDate = TimeEntry.UpdateDate;
             _IsDeleted = TimeEntry.IsDeleted;
             _TaskID = TimeEntry.TaskID;
-
         }
 
         private string _Notes;
+
         public string Notes
         {
             get { return _Notes; }
@@ -39,8 +35,8 @@ namespace TaskTracker_V1.ViewModels
             }
         }
 
-
         private int _TotalTime;
+
         public int TotalTime
         {
             get { return _TotalTime; }
@@ -51,6 +47,7 @@ namespace TaskTracker_V1.ViewModels
         }
 
         private DateTime _AddDate;
+
         public DateTime AddDate
         {
             get { return _AddDate; }
@@ -61,6 +58,7 @@ namespace TaskTracker_V1.ViewModels
         }
 
         private Boolean _IsDeleted;
+
         public Boolean IsDeleted
         {
             get { return _IsDeleted; }
@@ -71,6 +69,7 @@ namespace TaskTracker_V1.ViewModels
         }
 
         private DateTime _UpdateDate;
+
         public DateTime UpdateDate
         {
             get { return _UpdateDate; }
@@ -81,6 +80,7 @@ namespace TaskTracker_V1.ViewModels
         }
 
         private int _TaskID;
+
         public int TaskID
         {
             get { return _TaskID; }
@@ -89,8 +89,5 @@ namespace TaskTracker_V1.ViewModels
                 SetValue(ref _TaskID, value);
             }
         }
-
     }
-
-
 }

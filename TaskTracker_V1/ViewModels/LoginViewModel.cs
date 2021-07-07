@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using TaskTracker_V1.Views;
-using Xamarin.Forms;
+﻿using TaskTracker_V1.Views;
 
 namespace TaskTracker_V1.ViewModels
 {

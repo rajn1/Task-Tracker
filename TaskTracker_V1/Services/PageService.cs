@@ -1,27 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-
-namespace TaskTracker_V1.Services
+﻿namespace TaskTracker_V1.Services
 {
-
     // Interface to control navigation logic
     // Can implement logic to control navigation and ensure certain business rules are enforced
     public interface IPageService
     {
         Task PushAsync(Page page);
+
         Task<Page> PopAsync();
+
         Task<bool> DisplayAlert(string title, string message, string ok, string cancel);
+
         Task DisplayAlert(string title, string message, string ok);
     }
 
     // CLass that extends the above to provide methods for navigation
-    class PageService: IPageService
+    internal class PageService : IPageService
     {
-
         public async Task DisplayAlert(string title, string message, string ok)
         {
             await MainPage.DisplayAlert(title, message, ok);
@@ -49,8 +43,5 @@ namespace TaskTracker_V1.Services
         {
             get { return Application.Current.MainPage; }
         }
-
-
-
     }
 }

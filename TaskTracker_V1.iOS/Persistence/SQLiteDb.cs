@@ -1,11 +1,9 @@
-﻿using Foundation;
+﻿using SQLite;
 using System;
 using System.IO;
-using SQLite;
-using Xamarin.Forms;
 using TaskTracker_V1.iOS;
 using TaskTracker_V1.Persistence;
-
+using Xamarin.Forms;
 
 [assembly: Dependency(typeof(SQLiteDb))]
 

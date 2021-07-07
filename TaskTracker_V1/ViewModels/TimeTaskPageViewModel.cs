@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using TaskTracker_V1.Models;
+﻿using TaskTracker_V1.Models;
 using TaskTracker_V1.Services;
 using TaskTracker_V1.Views;
-using Xamarin.Forms;
 
 namespace TaskTracker_V1.ViewModels
 {
@@ -49,7 +41,6 @@ namespace TaskTracker_V1.ViewModels
             DeleteTimeTaskCommand = new Command<TimeTaskViewModel>(async c => await DeleteTimeTask(c));
             StartTimeTaskTimerCommand = new Command<TimeTaskViewModel>(async c => await StartTimeTaskTimer());
 
-
             // Listen for a message sent indicating a TimeTask was added and then act on it
             MessagingCenter.Subscribe<TimeTasksDetailViewModel, TimeTask>
                 (this, Events.TimeTaskAdded, OnTimeTaskAdded);
@@ -58,7 +49,6 @@ namespace TaskTracker_V1.ViewModels
             MessagingCenter.Subscribe<TimeTasksDetailViewModel, TimeTask>
                 (this, Events.TimeTaskUpdated, OnTimeTaskUpdated);
         }
-
 
         private void OnTimeTaskAdded(TimeTasksDetailViewModel source, TimeTask TimeTask)
         {
@@ -120,6 +110,5 @@ namespace TaskTracker_V1.ViewModels
             SelectedTimeTask = null;
             await _pageService.PushAsync(new TimeEntryDetailPage(new TimeEntryViewModel()));
         }
-
     }
 }

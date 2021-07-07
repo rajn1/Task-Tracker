@@ -1,9 +1,6 @@
-﻿using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using TaskTracker_V1.ViewModels;
-using TaskTracker_V1.Persistence;
+﻿using TaskTracker_V1.Persistence;
 using TaskTracker_V1.Services;
-
+using TaskTracker_V1.ViewModels;
 
 namespace TaskTracker_V1.Views
 {
@@ -23,10 +20,12 @@ namespace TaskTracker_V1.Views
             ViewModel.LoadDataCommand.Execute(null);
             base.OnAppearing();
         }
-        void OnTimeTaskSelected(object sender, SelectedItemChangedEventArgs e)
+
+        private void OnTimeTaskSelected(object sender, SelectedItemChangedEventArgs e)
         {
             ViewModel.SelectTimeTaskCommand.Execute(e.SelectedItem);
         }
+
         public TimeTaskPageViewModel ViewModel
         {
             get { return BindingContext as TimeTaskPageViewModel; }

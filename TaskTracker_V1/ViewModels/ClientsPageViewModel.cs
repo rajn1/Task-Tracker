@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using TaskTracker_V1.Models;
+﻿using TaskTracker_V1.Models;
 using TaskTracker_V1.Services;
 using TaskTracker_V1.Views;
-using Xamarin.Forms;
 
 namespace TaskTracker_V1.ViewModels
 {
@@ -46,6 +38,7 @@ namespace TaskTracker_V1.ViewModels
             AddClientCommand = new Command(async () => await AddClient());
             SelectClientCommand = new Command<ClientViewModel>(async c => await SelectClient(c));
             DeleteClientCommand = new Command<ClientViewModel>(async c => await DeleteClient(c));
+            OpenTimeEntryCommand = new Command<ClientViewModel>(async c => await OpenTimeEntry(c));
 
             MessagingCenter.Subscribe<ClientsDetailViewModel, Client>
                 (this, Events.ClientAdded, OnClientAdded);
@@ -53,7 +46,6 @@ namespace TaskTracker_V1.ViewModels
             MessagingCenter.Subscribe<ClientsDetailViewModel, Client>
                 (this, Events.ClientUpdated, OnClientUpdated);
         }
-
 
         private void OnClientAdded(ClientsDetailViewModel source, Client client)
         {
@@ -107,6 +99,11 @@ namespace TaskTracker_V1.ViewModels
                 var Client = await _ClientStore.GetClient(ClientViewModel.ID);
                 await _ClientStore.DeleteClient(Client);
             }
+        }
+
+        private async Task OpenTimeEntry(ClientViewModel ClientViewModel)
+        {
+            await _pageService.PushAsync(new TimeEntryListPage());
         }
     }
 }

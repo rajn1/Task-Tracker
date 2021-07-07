@@ -1,20 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using TaskTracker_V1.Models;
+﻿using TaskTracker_V1.Models;
 using TaskTracker_V1.Services;
 using TaskTracker_V1.Views;
-using Xamarin.Forms;
 
 namespace TaskTracker_V1.ViewModels
 {
     public class TimeEntryListPageViewModel : BaseViewModel
     {
-
         // Pending Instantiation to ensure this class acts as a list of time entries tied to a task
         // Link up to MessageCenter to react when a new TimeEntry is added or Updated
 
@@ -48,7 +39,6 @@ namespace TaskTracker_V1.ViewModels
             SelectTimeEntryCommand = new Command<TimeEntryViewModel>(async c => await SelectTimeEntry(c));
             DeleteTimeEntryCommand = new Command<TimeEntryViewModel>(async c => await DeleteTimeEntry(c));
 
-
             // Listen for a message sent indicating a TimeEntry was added and then act on it
             MessagingCenter.Subscribe<TimeEntryPageViewModel, TimeEntry>
                 (this, Events.TimeEntryAdded, OnTimeEntryAdded);
@@ -57,6 +47,7 @@ namespace TaskTracker_V1.ViewModels
             MessagingCenter.Subscribe<TimeEntryPageViewModel, TimeEntry>
                 (this, Events.TimeEntryUpdated, OnTimeEntryUpdated);
         }
+
         private void OnTimeEntryAdded(TimeEntryPageViewModel source, TimeEntry TimeEntry)
         {
             TimeEntries.Add(new TimeEntryViewModel(TimeEntry));
@@ -81,6 +72,7 @@ namespace TaskTracker_V1.ViewModels
             foreach (var TimeEntry in TimeEntries)
                 this.TimeEntries.Add(new TimeEntryViewModel(TimeEntry));
         }
+
         // Add button will trigger this call to a new page where TimeEntry details can be entered
         private async Task AddTimeEntry(TimeEntryViewModel TimeEntry)
         {

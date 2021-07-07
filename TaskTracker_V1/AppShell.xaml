@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:TaskTracker_V1.Views"
        Title="TaskTracker_V1"
@@ -7,7 +7,7 @@
 
     <!--
         The overall app visual hierarchy is defined here, along with navigation.
-    
+
         https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/
     -->
 
@@ -20,9 +20,9 @@
                 <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
                 <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
                 <Setter Property="Shell.TabBarBackgroundColor" Value="Black" />
-                <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
-                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
-                <Setter Property="Shell.TabBarTitleColor" Value="White"/>
+                <Setter Property="Shell.TabBarForegroundColor" Value="White" />
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarTitleColor" Value="White" />
             </Style>
             <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
             <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
@@ -30,9 +30,10 @@
     </Shell.Resources>
 
     <TabBar>
-        <ShellContent Title="Tasks" Icon="icon_feed.png" Route="TimeTasksPage" ContentTemplate="{DataTemplate local:TimeTasksPage}" />
-        <ShellContent Title="Clients" Icon="icon_feed.png" Route="ClientsPage" ContentTemplate="{DataTemplate local:ClientsPage}" />
-        <ShellContent Title="About" Icon="icon_about.png" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
+        <ShellContent Title="Tasks"        Icon="icon_feed.png"  Route="TimeTasksPage"     ContentTemplate="{DataTemplate local:TimeTasksPage}" />
+        <ShellContent Title="Clients"      Icon="icon_feed.png"  Route="ClientsPage"       ContentTemplate="{DataTemplate local:ClientsPage}" />
+        <ShellContent Title="Time Entries" Icon="icon_feed.png"  Route="TimeEntryListPage" ContentTemplate="{DataTemplate local:TimeEntryListPage}" />
+        <<ShellContent Title="About"        Icon="icon_about.png" Route="AboutPage"         ContentTemplate="{DataTemplate local:AboutPage}" />
     </TabBar>
 
     <!--
@@ -42,6 +43,4 @@
     <TabBar>
         <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
     </TabBar>
-
-
 </Shell>

@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TaskTracker_V1.Views.AboutPage"
              xmlns:vm="clr-namespace:TaskTracker_V1.ViewModels"
+             x:Class="TaskTracker_V1.Views.AboutPage"
              Title="{Binding Title}">
-    
+
     <ContentPage.BindingContext>
         <vm:AboutViewModel />
     </ContentPage.BindingContext>
-    
+
     <ContentPage.Resources>
         <ResourceDictionary>
             <Color x:Key="Accent">#96d1ff</Color>
@@ -29,14 +29,14 @@
         </StackLayout>
         <ScrollView Grid.Row="1">
             <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
-                <Label Text="Start developing now" FontSize="Title"/>
-                <Label Text="More Details Coming Soon!" FontSize="16" Padding="0,0,0,0"/>
+                <Label Text="Start developing now" FontSize="Title" />
+                <Label Text="More Details Coming Soon!" FontSize="16" Padding="0,0,0,0" />
                 <Label FontSize="16" Padding="0,24,0,0">
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
-                                <Span Text="Learn more at "/>
-                                <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
+                                <Span Text="Learn more at " />
+                                <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold" />
                             </FormattedString.Spans>
                         </FormattedString>
                     </Label.FormattedText>
@@ -48,5 +48,4 @@
             </StackLayout>
         </ScrollView>
     </Grid>
-
 </ContentPage>
