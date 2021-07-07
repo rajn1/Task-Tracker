@@ -47,7 +47,7 @@ namespace TaskTracker_V1.ViewModels
             AddTimeTaskCommand = new Command(async () => await AddTimeTask());
             SelectTimeTaskCommand = new Command<TimeTaskViewModel>(async c => await SelectTimeTask(c));
             DeleteTimeTaskCommand = new Command<TimeTaskViewModel>(async c => await DeleteTimeTask(c));
-            StartTimeTaskTimerCommand = new Command<TimeTaskViewModel>(async c => await StartTimeTaskTimer(c));
+            StartTimeTaskTimerCommand = new Command<TimeTaskViewModel>(async c => await StartTimeTaskTimer());
 
 
             // Listen for a message sent indicating a TimeTask was added and then act on it
@@ -115,15 +115,10 @@ namespace TaskTracker_V1.ViewModels
         }
 
         // Menu item will allow the selected TimeTask to be deleted from the TimeTasks list
-        private async Task StartTimeTaskTimer(TimeTaskViewModel TimeTask)
+        private async Task StartTimeTaskTimer()
         {
-
-            if (TimeTask == null)
-                return;
-
             SelectedTimeTask = null;
-            await _pageService.PushAsync(new TimeEntryDetailPage(TimeTask));
-
+            await _pageService.PushAsync(new TimeEntryDetailPage(new TimeEntryViewModel()));
         }
 
     }

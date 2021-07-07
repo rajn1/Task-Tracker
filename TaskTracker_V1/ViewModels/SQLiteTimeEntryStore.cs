@@ -17,7 +17,7 @@ namespace TaskTracker_V1.ViewModels
             _connection.CreateTableAsync<TimeEntry>();
         }
         // Convert TimeEntrys stored in SQL DB to a list
-        public async Task<IEnumerable<TimeEntry>> GetTimeEntrysAsync()
+        public async Task<IEnumerable<TimeEntry>> GetTimeEntriesAsync()
         {
             return await _connection.Table<TimeEntry>().ToListAsync();
         }

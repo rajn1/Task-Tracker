@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:control="clr-namespace:ProgressRingControl.Forms.Plugin;assembly=ProgressRing.Forms.Plugin"
-             xmlns:local1="clr-namespace:TaskTracker_V1.ViewModels"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:local1="clr-namespace:TaskTracker_V1.ViewModels" x:DataType="local1:TimeEntryPageViewModel"
              mc:Ignorable="d" x:Class="TaskTracker_V1.Views.TimeEntryDetailPage">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -17,25 +16,33 @@
             <TableSection>
                 <ViewCell>
                     <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                        <Label Text="[Add Client Name Here]" VerticalOptions="Start" HorizontalOptions="Center"/>
+                        <Label Text="[Add Client Name Here]" VerticalOptions="Start" HorizontalOptions="Center" x:Name="ClientName"/>
                     </StackLayout>
                 </ViewCell>
             </TableSection>
             <TableSection>
                 <ViewCell>
                     <StackLayout>
-                        <control:ProgressRing RingProgressColor="Orange" Scale="2" RingThickness="5"  Progress="{Binding ProgressValue , Converter={StaticResource ValueProgressBar},Mode=TwoWay}"/>
-                        <Label FontAttributes="Bold" FontSize="20" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="Black" Text="{Binding ProgressValue, StringFormat='{0}'}"/>
-                        <Label Text="Sec" HorizontalTextAlignment="Center"/>
+                        <!--
+                        <control:ProgressRing RingProgressColor="Orange" Scale="2" RingThickness="5"  Progress="{Binding ProgressValue , Converter={StaticResource ValueProgressBar},Mode=TwoWay}" />
+                        <Label FontAttributes="Bold" FontSize="20" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="Black" Text="{Binding ProgressValue, StringFormat='{0}'}" />
+                        <Label Text="Sec" HorizontalTextAlignment="Center" />
+                        -->
+                        <Label x:Name="TimerCount" TextColor="Black" Text="{Binding ProgressValue, Mode=TwoWay}"/>
                     </StackLayout>
                 </ViewCell>
             </TableSection>
             <TableSection>
                 <ViewCell>
-                    <Button BackgroundColor="white" TextColor="black" Opacity="0.15" HorizontalOptions="Center" Text="Stop Timer"/>
+                    <Button x:Name="TimerStartButton" BackgroundColor="white" TextColor="black" Opacity="0.5" HorizontalOptions="Center" Text="Start Timer" Command="{Binding TimerStartCommand}" />
+                </ViewCell>
+                <ViewCell>
+                    <Button x:Name="TimerStopButton" BackgroundColor="white" TextColor="black" Opacity="0.5" HorizontalOptions="Center" Text="Stop Timer" Command="{Binding TimerStopCommand}" />
+                </ViewCell>
+                <ViewCell>
+                    <Button x:Name="SaveButton" BackgroundColor="white" TextColor="black" Opacity="0.5" HorizontalOptions="Center" Text="Save" Command="{Binding SaveCommand}" />
                 </ViewCell>
             </TableSection>
         </TableRoot>
     </TableView>
-
 </ContentPage>

@@ -44,7 +44,7 @@ namespace TaskTracker_V1.ViewModels
             _pageService = pageService;
 
             LoadDataCommand = new Command(async () => await LoadData());
-            AddTimeEntryCommand = new Command(async () => await AddTimeEntry());
+            AddTimeEntryCommand = new Command<TimeEntryViewModel>(async (c) => await AddTimeEntry(c));
             SelectTimeEntryCommand = new Command<TimeEntryViewModel>(async c => await SelectTimeEntry(c));
             DeleteTimeEntryCommand = new Command<TimeEntryViewModel>(async c => await DeleteTimeEntry(c));
 
@@ -82,9 +82,9 @@ namespace TaskTracker_V1.ViewModels
                 this.TimeEntries.Add(new TimeEntryViewModel(TimeEntry));
         }
         // Add button will trigger this call to a new page where TimeEntry details can be entered
-        private async Task AddTimeEntry()
+        private async Task AddTimeEntry(TimeEntryViewModel TimeEntry)
         {
-            await _pageService.PushAsync(new TimeEntryDetailPage(new TimeEntryViewModel()));
+            await _pageService.PushAsync(new TimeEntryDetailPage(TimeEntry));
         }
 
         // Navigate to the TimeTask details page to allow editing
